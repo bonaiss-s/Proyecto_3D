@@ -14,6 +14,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector2 moveValue = moveAction.ReadValue<Vector2>();
         
+        if (jumpAction.IsPressed())
+        {
+            return moveAction.ReadValue<Vector2>();
+        }
     }
 }
