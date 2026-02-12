@@ -15,10 +15,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
-        
-        if (jumpAction.IsPressed())
-        {
+    }
+
+
+    public Vector2 Direccion() 
+    {
+
             return moveAction.ReadValue<Vector2>();
-        }
+        
     }
 }

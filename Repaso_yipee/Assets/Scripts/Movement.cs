@@ -11,22 +11,17 @@ public class Movement : MonoBehaviour
     private bool ismove;
 
     float velocidad = 5;    
-    void Start()
-    {
-       
-    }
-
 
     void Update()
     {
-        
+        Movimiento();
     }
 
     private void Movimiento()
     {
         if (ismove)
         {
-            rb.linearVelocity = PlayerController.
+            rb.linearVelocity = playerController.Direccion() * velocidad;
 
         }
     }
