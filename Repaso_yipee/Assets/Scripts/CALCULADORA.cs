@@ -1,16 +1,46 @@
+using JetBrains.Annotations;
+using TMPro;
 using UnityEngine;
 
 public class CALCULADORA : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+
+    [SerializeField] private TMP_InputField _inputA;
+    [SerializeField] private TMP_InputField _inputB;
+    [SerializeField] private TMP_InputField _resultado;
+
+ 
+
+
+    public string Calcular(string Operador, float _inputA, float _inputB)
     {
-        
+        switch (Operador) 
+        {
+
+            case "+":
+                return _inputA + _inputB.ToString();
+
+                break;
+
+            case "-":
+                return _inputA - _inputB.ToString(); 
+
+                break;
+
+            case "x":
+                return _inputA * _inputB.ToString();
+
+                break; 
+
+            case "/":
+                return _inputA / _inputB.ToString();
+
+                break;  
+        }
+
+
     }
+    
+
 }
