@@ -16,29 +16,15 @@ public class PlayerView : MonoBehaviour
     {
         _render = GetComponent<Renderer>();
 
-       controller = GetComponent<PlayerController>();
+        controller = GetComponent<PlayerController>();
 
         controller.Direccion();
 
 
-        
+
 
     }
+
+}
 
  
-    void Update()
-    {
-        Cambiarcolor();
-       
-    }
-
-    public void Cambiarcolor()
-    {
-        if (controller.Direccion() magnitud > 0 ) {
-        
-         _render.material color = Color.red;
-
-        }
-
-    }
-}
